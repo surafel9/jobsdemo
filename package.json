@@ -4,7 +4,10 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"build": "npm run lint && npm run test && npm run transpile",
+		"lint": "eslint .",
+		"test": "jest",
+		"transpile": "babel src --out-dir dist"
 	},
 	"author": "Surafel",
 	"license": "MIT",
