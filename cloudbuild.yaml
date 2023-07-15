@@ -16,4 +16,5 @@ steps:
           - '-m'
           - 'rsync'
           - '-r'
-          - 'gs://rasjobs'
+          - 'build/'
+          - 'gs://rasjobs/' # Make sure to replace 'rasjobs' with your actual bucket name
