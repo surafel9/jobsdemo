@@ -9,12 +9,12 @@ steps:
       entrypoint: 'npm'
       args: ['run', 'build']
 
-    # Deploy to target environment
+    # Deploy backend to target environment
     - name: 'gcr.io/cloud-builders/gsutil'
       entrypoint: 'gsutil'
       args:
           - '-m'
           - 'rsync'
           - '-r'
-          - 'build'
-          - 'gs://rasjobs/' # Make sure to replace 'rasjobs' with your actual bucket name
+          - 'backend'
+          - 'gs://rasjobs-backend/'
