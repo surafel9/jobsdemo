@@ -1,0 +1,22 @@
+steps:
+    # Install dependencies
+    - name: 'gcr.io/cloud-builders/npm'
+      entrypoint: 'npm'
+      args: ['install']
+      dir: 'frontend/rasjobs'
+
+    # Build the application
+    - name: 'gcr.io/cloud-builders/npm'
+      entrypoint: 'npm'
+      args: ['run', 'build']
+      dir: 'frontend/rasjobs'
+
+    # Deploy to target environment
+    - name: 'gcr.io/cloud-builders/gsutil'
+      entrypoint: 'gsutil'
+      args:
+          - '-m'
+          - 'rsync'
+          - '-r'
+          - 'frontend/rasjobs/build/'
+          - 'gs://rasjobs'
