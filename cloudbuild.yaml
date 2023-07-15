@@ -16,5 +16,5 @@ steps:
           - '-m'
           - 'rsync'
           - '-r'
-          - 'backend'
-          - 'gs://rasjobs-backend/'
+          - './'
+          - 'gs://rasjobs/'
