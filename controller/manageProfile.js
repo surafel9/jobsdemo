@@ -24,7 +24,7 @@ const createProfile = async (req, res) => {
 		const update = await addUserProfile(newUser);
 		res.status(200).json(update);
 	} catch (error) {
-		console.log(error);
+		//console.log(error);
 		res.status(500).json({ error: 'Error creating user profile' });
 	}
 };
@@ -39,7 +39,7 @@ const deleteProfile = async (req, res) => {
 			throw new Error('User not found');
 		}
 	} catch (error) {
-		console.log(error);
+		//console.log(error);
 		res.status(500).json({ error: 'Error deleting user profile' });
 	}
 };
@@ -49,7 +49,7 @@ const getProfile = async (req, res) => {
 		const user = await getUserProfileByEmail(newUser);
 		res.status(200).json(user);
 	} catch (error) {
-		console.log(error);
+		//console.log(error);
 		res.status(500).json({ error: 'Error getting user profile' });
 	}
 };

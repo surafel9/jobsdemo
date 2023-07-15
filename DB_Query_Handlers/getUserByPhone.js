@@ -11,7 +11,7 @@ const getUserByPhone = async (phone_number) => {
 		}
 		return [];
 	} catch (error) {
-		console.log(error);
+		//console.log(error);
 		return 'Error while while fetching user by phone';
 	}
 };

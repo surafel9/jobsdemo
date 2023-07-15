@@ -11,7 +11,7 @@ const postJob = async (req, res, next) => {
 		}
 		return res.status(400).json('Unauthorized');
 	} catch (error) {
-		console.log(error);
+		//console.log(error);
 	}
 };
 
