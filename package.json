@@ -4,7 +4,7 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"build": "npm run lint && npm test -- --passWithNoTests && npm run transpile",
+		"build": "npm run lint && npm test -- --passWithNoTests",
 		"lint": "eslint .",
 		"test": "jest",
 		"transpile": "babel src --out-dir dist"
