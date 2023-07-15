@@ -16,5 +16,4 @@ steps:
           - '-m'
           - 'rsync'
           - '-r'
-          - 'frontend/rasjobs/build/'
           - 'gs://rasjobs'
