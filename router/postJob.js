@@ -1,5 +1,4 @@
 const express = require('express');
-const validateJobsData = require('../Util/inputValidation');
 const postJob = require('../controller/postJob');
 
 const postJobRouter = express.Router();
