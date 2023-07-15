@@ -1,7 +1,7 @@
 const getUserByEmail = require('../DB_Query_Handlers/getUserByEmail');
 const bcrypt = require('bcrypt');
 
-const logIn = async (req, res, next) => {
+const logIn = async (req, res) => {
 	try {
 		const user = await getUserByEmail(req.body.accessFormData.email);
 		//console.log(user);

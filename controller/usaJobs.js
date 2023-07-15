@@ -1,13 +1,11 @@
 require('dotenv').config();
 const axios = require('axios');
-const { json } = require('body-parser');
-const express = require('express');
 const baseURL = 'https://data.usajobs.gov/api/search';
 const host = 'data.usajobs.gov';
 var userAgent = 'io4kasa@gmail.com';
 var authKey = process.env.USAJOBS_API_KEY;
 
-const getUSAJOBS = async (req, res, next) => {
+const getUSAJOBS = async (req, res) => {
 	const Keyword = req.query;
 	///const { Keyword, LocationName } = req.body;
 	//console.log(Keyword);

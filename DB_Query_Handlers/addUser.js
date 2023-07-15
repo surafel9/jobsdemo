@@ -28,17 +28,8 @@ const addUser = async (req) => {
 };
 
 const insertSaltedPassword = async (saltInsertQuery, values) => {
-	try {
-		await pool.query(saltInsertQuery, values);
-		//console.log('Salted password inserted successfully');
-	} catch (error) {
-		//console.error('Error inserting salted password:', error);
-		throw error;
-	}
-};
-
-const checkSalt = async (rows) => {
-	//check bycript
+	await pool.query(saltInsertQuery, values);
+	//console.log('Salted password inserted successfully');
 };
 
 module.exports = addUser;

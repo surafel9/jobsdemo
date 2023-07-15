@@ -1,12 +1,10 @@
 require('dotenv').config();
 const jwt = require('jsonwebtoken');
 const getUserByEmail = require('../DB_Query_Handlers/getUserByEmail');
-const getUserByPhone = require('../DB_Query_Handlers/getUserByPhone');
 const addUser = require('../DB_Query_Handlers/addUser');
-const subscribeToSignUp = require('./manageProfile');
 const CustomMailer = require('../Util/nodeMailer');
 
-const signUp = async (req, res, next) => {
+const signUp = async (req, res) => {
 	const userByEmail = await getUserByEmail(req.body.accessFormData.email);
 	console.log(userByEmail);
 	try {

@@ -1,7 +1,7 @@
 const getUserByEmail = require('../DB_Query_Handlers/getUserByEmail');
 const addJob = require('../DB_Query_Handlers/addJob');
 
-const postJob = async (req, res, next) => {
+const postJob = async (req, res) => {
 	const user = await getUserByEmail(req.body.email);
 
 	try {
