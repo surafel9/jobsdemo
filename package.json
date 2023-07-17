@@ -7,7 +7,8 @@
 		"build": "npm run lint && npm test -- --passWithNoTests",
 		"lint": "eslint .",
 		"test": "jest",
-		"transpile": "babel src --out-dir dist"
+		"transpile": "babel src --out-dir dist",
+		"start": "node index.js"
 	},
 	"author": "Surafel",
 	"license": "MIT",

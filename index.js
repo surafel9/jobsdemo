@@ -22,7 +22,7 @@ app.use(cors());
 //disabling fingerprinting
 app.disable('x-powered-by');
 
-const port = process.env.PORT || 3001;
+const port = process.env.PORT || 8080;
 
 // Test the connection
 pool.query('SELECT NOW()', (err, res) => {
